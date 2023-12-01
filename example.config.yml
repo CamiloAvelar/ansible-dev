@@ -50,6 +50,8 @@ apt_packages:
   - git
   - fzf
   - build-essential
+  - ninja-build
+  - gettext
   - cmake
   - pkg-config
   - lua5.1
