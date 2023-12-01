@@ -17,17 +17,14 @@
     - import_tasks: tasks/ssh.yml
     - import_tasks: tasks/git-setup.yml
     - import_tasks: tasks/core-setup.yml
+    - name: Setup zsh
+      import_role:
+        name: ansible-role-zsh
+      vars:
+        zsh_user: camiloavelar
     - name: Setup node
       import_role:
         name: ansible-role-nvm
       become: true
       become_user: camiloavelar
     - import_tasks: tasks/npm-packages.yml
-    - name: Setup zsh
-      import_role:
-        name: ansible-role-zsh
-      vars:
-        zsh_user: camiloavelar
-    - name: Change shell to zsh
-      become: true
-      shell: chsh -s $(which zsh)
