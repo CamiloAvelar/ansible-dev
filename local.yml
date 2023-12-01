@@ -33,3 +33,4 @@
     - import_tasks: tasks/npm-packages.yml
     - import_tasks: tasks/nvim.yml
     - import_tasks: tasks/brave.yml
+    - import_tasks: tasks/dotfiles.yml
