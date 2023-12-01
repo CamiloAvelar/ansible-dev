@@ -1,9 +1,19 @@
 - hosts: localhost
+  
   vars:
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
+  
+  vars_files:
+    - example.config.yml
+
   pre_tasks:
+  - name: Include main playbook configuration.
+    ansible.builtin.include_vars: "{{ item }}"
+    with_fileglob:
+      - "{{ playbook_dir }}/config.yml"
+    tags: ["always"]
   - name: Update Apt
     become: true
     apt:
@@ -17,14 +27,9 @@
     - import_tasks: tasks/ssh.yml
     - import_tasks: tasks/git-setup.yml
     - import_tasks: tasks/core-setup.yml
-    - name: Setup zsh
-      import_role:
-        name: ansible-role-zsh
-      vars:
-        zsh_user: camiloavelar
-    - name: Setup node
-      import_role:
-        name: ansible-role-nvm
-      become: true
-      become_user: camiloavelar
+    - import_tasks: tasks/fonts.yml
+    - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/node.yml
     - import_tasks: tasks/npm-packages.yml
+    - import_tasks: tasks/nvim.yml
+    - import_tasks: tasks/brave.yml

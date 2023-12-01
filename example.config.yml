@@ -1,0 +1,29 @@
+---
+# System settings
+
+# Set hostname
+custom_hostname: my-awesome-pc
+
+# User settings
+
+# Set user to be used for configuration
+username: "{{ lookup('env', 'USER') }}"
+
+# Install Nerd Fonts
+install_fonts: true
+installed_nerdfonts:
+  - Meslo
+
+# Install and configure zsh
+configure_zsh: true
+# Plugin names have to be in the format github_user/plugin_name
+zsh_plugins:
+  - zsh-users/zsh-syntax-highlighting
+  - zsh-users/zsh-history-substring-search
+
+# Theme names have to be in the format github_user/theme_name
+zsh_themes:
+  - romkatv/powerlevel10k
+
+NODEJS_VERSION: "20"
+ansible_distribution_release: "focal"

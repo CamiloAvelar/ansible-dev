@@ -1,0 +1,44 @@
+---
+- name: Install GPG
+  tags: nodejs, install, setup
+  become: true
+  apt:
+    name: gnupg
+    update_cache: yes
+    state: present
+
+- name: Install the gpg key for nodejs LTS
+  become: true
+  apt_key:
+    url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    state: present
+
+- name: Install the nodejs LTS repos
+  become: true
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/node_{{ NODEJS_VERSION }}.x {{ ansible_distribution_release }} main"
+    state: present
+    update_cache: yes
+
+- name: Install NodeJS
+  tags: &tags_for_node_tasks ["install", "productivity", "node"]
+  become: true
+  apt:
+    name: nodejs
+    state: latest
+
+- name: npmjs prefix
+  shell: mkdir -p ~/.local/.npm-global
+  tags: *tags_for_node_tasks
+
+- name: add npmjs to path
+  shell: PATH=~/.local/.npm-global/bin:$PATH
+  tags: *tags_for_node_tasks
+
+- name: npmjs global settings
+  shell: npm config set prefix '~/.local/.npm-global'
+  tags: *tags_for_node_tasks
+
+- name: npmjs global settings export path in case I don't have dotfiles installed
+  shell: export PATH=~/.local/.npm-global/bin:$PATH
+  tags: *tags_for_node_tasks
