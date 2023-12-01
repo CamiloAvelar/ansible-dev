@@ -14,6 +14,10 @@ install_fonts: true
 installed_nerdfonts:
   - Meslo
 
+# Install and configure tmux
+configure_tmux: true
+tmux_dir: $HOME/.tmux
+
 # Install and configure zsh
 configure_zsh: true
 # Plugin names have to be in the format github_user/plugin_name
@@ -24,6 +28,49 @@ zsh_plugins:
 # Theme names have to be in the format github_user/theme_name
 zsh_themes:
   - romkatv/powerlevel10k
+
+npm_packages:
+  - name: yarn
+    state: latest
+  - name: typescript-language-server
+    state: latest
+  - name: typescript
+    state: latest
+  - name: ts-node
+    state: latest
+
+# Install snap and and listed packages
+install_snap: true
+snap_packages:
+  - name: 1password
+  - name: teams-for-linux
+
+# Application packages
+apt_packages:
+  - git
+  - fzf
+  - build-essential
+  - cmake
+  - pkg-config
+  - lua5.1
+  - unzip
+  - i3
+  - curl
+  - htop
+  - golang
+  - lsof
+  - ripgrep
+  - clang
+  - clang-11
+  - clang-12
+  - clangd
+  - clangd-11
+  - clangd-12
+
+# Install homebrew and listed packages
+install_homebrew: true
+homebrew_packages:
+  - name: tfenv
 
 NODEJS_VERSION: "20"
 ansible_distribution_release: "focal"

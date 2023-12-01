@@ -25,12 +25,15 @@
       - core
   tasks:
     - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/snapd.yml
+    - import_tasks: tasks/apt.yml
     - import_tasks: tasks/git-setup.yml
-    - import_tasks: tasks/core-setup.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/zsh.yml
     - import_tasks: tasks/node.yml
     - import_tasks: tasks/npm-packages.yml
+    - import_tasks: tasks/homebrew.yml
     - import_tasks: tasks/nvim.yml
+    - import_tasks: tasks/tmux.yml
     - import_tasks: tasks/brave.yml
     - import_tasks: tasks/dotfiles.yml
