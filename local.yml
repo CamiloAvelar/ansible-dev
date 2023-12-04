@@ -38,3 +38,4 @@
     - import_tasks: tasks/brave.yml
     - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/luarocks.yml
+    - import_tasks: tasks/pip.yml

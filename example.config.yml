@@ -52,10 +52,17 @@ snap_packages:
   - name: 1password
   - name: teams-for-linux
 
+apt_repositories:
+  - ppa:deadsnakes/ppa
+
 # Application packages
 apt_packages:
   - git
+  - fd-find
   - fzf
+  - xclip
+  - python3.9
+  - python3-pip
   - build-essential
   - ninja-build
   - gettext
@@ -84,6 +91,9 @@ homebrew_packages:
   - name: lua-language-server
   - name: efm-langserver
   - name: stylua
+
+pip_packages:
+  - name: pynvim
 
 NODEJS_VERSION: "20"
 ansible_distribution_release: "focal"
