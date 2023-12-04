@@ -1,0 +1,11 @@
+---
+- name: Install go packages.
+  tags: go_packages
+  command: "go install {{ item.name }}"
+  loop: "{{ go_packages }}"
+  register: install_result   
+  when:
+    - go_packages is defined
+    - go_packages is iterable
+    - go_packages | length > 0
+

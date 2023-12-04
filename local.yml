@@ -39,3 +39,4 @@
     - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/luarocks.yml
     - import_tasks: tasks/pip.yml
+    - import_tasks: tasks/go.yml
