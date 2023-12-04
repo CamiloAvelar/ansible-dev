@@ -98,6 +98,7 @@ apt_packages:
 install_homebrew: true
 homebrew_packages:
   - name: tfenv
+  - name: tree-sitter
   - name: lua-language-server
   - name: efm-langserver
   - name: stylua
