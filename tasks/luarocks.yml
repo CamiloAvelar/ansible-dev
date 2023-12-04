@@ -1,0 +1,9 @@
+
+---
+- name: Install luarocks packages.
+  tags: luarocks_packages
+  become: true
+  shell: luarocks install {{ item.name }}
+  loop: "{{ luarocks_packages }}"
+  register: install_result
+  when: luarocks_packages is defined

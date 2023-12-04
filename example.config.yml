@@ -29,6 +29,9 @@ zsh_plugins:
 zsh_themes:
   - romkatv/powerlevel10k
 
+luarocks_packages:
+  - name: luacheck
+
 npm_packages:
   - name: yarn
     state: latest
@@ -37,6 +40,10 @@ npm_packages:
   - name: typescript
     state: latest
   - name: ts-node
+    state: latest
+  - name: tree-sitter
+    state: latest
+  - name: neovim
     state: latest
 
 # Install snap and and listed packages
@@ -68,11 +75,15 @@ apt_packages:
   - clangd
   - clangd-11
   - clangd-12
+  - luarocks
 
 # Install homebrew and listed packages
 install_homebrew: true
 homebrew_packages:
   - name: tfenv
+  - name: lua-language-server
+  - name: efm-langserver
+  - name: stylua
 
 NODEJS_VERSION: "20"
 ansible_distribution_release: "focal"

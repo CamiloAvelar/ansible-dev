@@ -1,5 +1,6 @@
 ---
 - name: Install apt repositories.
+  tags: &apt_tags ['install', 'apt']
   become: true
   ansible.builtin.apt_repository:
     repo: "{{ item }}"
@@ -12,6 +13,7 @@
     - apt_repositories | length > 0
 
 - name: Install apt packages.
+  tags: *apt_tags
   become: true
   ansible.builtin.apt:
     name: "{{ item.name | default(item) }}"
