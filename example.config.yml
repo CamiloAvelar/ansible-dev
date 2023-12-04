@@ -41,7 +41,17 @@ npm_packages:
     state: latest
   - name: ts-node
     state: latest
-  - name: tree-sitter
+  - name: fixjson
+    state: latest
+  - name: "@fsouza/prettierd"
+    state: latest
+  - name: eslint
+    state: latest
+  - name: shellcheck
+    state: latest
+  - name: clang-format
+    state: latest
+  - name: cpplint
     state: latest
   - name: neovim
     state: latest
@@ -91,9 +101,12 @@ homebrew_packages:
   - name: lua-language-server
   - name: efm-langserver
   - name: stylua
+  - name: hadolint
 
 pip_packages:
   - name: pynvim
+  - name: black
+  - name: flake8
 
 NODEJS_VERSION: "20"
 ansible_distribution_release: "focal"
