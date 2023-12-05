@@ -71,6 +71,7 @@ snap_packages:
   - name: insomnia
 
 apt_repositories:
+  - ppa:longsleep/golang-backports
   - ppa:deadsnakes/ppa
 
 # Application packages
@@ -91,7 +92,7 @@ apt_packages:
   - i3
   - curl
   - htop
-  - golang
+  - golang-go
   - lsof
   - ripgrep
   - clang
