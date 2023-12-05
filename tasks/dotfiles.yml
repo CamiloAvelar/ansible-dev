@@ -12,6 +12,7 @@
     recursive: yes
     update: yes
     accept_hostkey: yes
+    force: true
     version: main
   tags:
     - install

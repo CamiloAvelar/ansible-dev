@@ -64,6 +64,7 @@ snap_packages:
   - name: 1password
   - name: teams-for-linux
   - name: discord
+  - name: insomnia
 
 apt_repositories:
   - ppa:deadsnakes/ppa
