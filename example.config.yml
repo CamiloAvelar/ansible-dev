@@ -57,6 +57,8 @@ npm_packages:
     state: latest
   - name: bash-language-server
     state: latest
+  - name: vscode-json-languageservice 
+    state: latest
   - name: dockerfile-language-server-nodejs
     state: latest
 
