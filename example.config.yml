@@ -57,6 +57,8 @@ npm_packages:
     state: latest
   - name: bash-language-server
     state: latest
+  - name: dockerfile-language-server-nodejs
+    state: latest
 
 # Install snap and and listed packages
 install_snap: true
