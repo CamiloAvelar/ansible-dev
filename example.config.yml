@@ -55,12 +55,15 @@ npm_packages:
     state: latest
   - name: neovim
     state: latest
+  - name: bash-language-server
+    state: latest
 
 # Install snap and and listed packages
 install_snap: true
 snap_packages:
   - name: 1password
   - name: teams-for-linux
+  - name: discord
 
 apt_repositories:
   - ppa:deadsnakes/ppa
