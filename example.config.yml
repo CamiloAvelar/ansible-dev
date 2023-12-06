@@ -59,6 +59,8 @@ npm_packages:
     state: latest
   - name: vscode-json-languageserver 
     state: latest
+  - name: intelephense
+    state: latest
   - name: dockerfile-language-server-nodejs
     state: latest
 
