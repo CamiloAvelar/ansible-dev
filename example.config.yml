@@ -80,6 +80,7 @@ apt_repositories:
 apt_packages:
   - pulseaudio
   - feh
+  - picom
   - alacritty
   - git
   - fd-find
