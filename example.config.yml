@@ -78,6 +78,7 @@ apt_repositories:
 
 # Application packages
 apt_packages:
+  - pulseaudio
   - git
   - fd-find
   - fzf
