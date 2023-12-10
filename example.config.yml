@@ -79,6 +79,7 @@ apt_repositories:
 # Application packages
 apt_packages:
   - pulseaudio
+  - feh
   - alacritty
   - git
   - fd-find
