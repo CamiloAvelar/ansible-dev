@@ -71,6 +71,7 @@ snap_packages:
   - name: teams-for-linux
   - name: discord
   - name: insomnia
+  - name: alacritty
 
 apt_repositories:
   - ppa:longsleep/golang-backports
@@ -81,7 +82,6 @@ apt_packages:
   - pulseaudio
   - feh
   - picom
-  - alacritty
   - git
   - fd-find
   - fzf
