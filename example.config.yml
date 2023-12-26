@@ -120,6 +120,8 @@ homebrew_packages:
   - name: efm-langserver
   - name: stylua
   - name: hadolint
+  - name: zsh-syntax-highlighting
+  - name: zsh-autosuggestions
 
 pip_packages:
   - name: pynvim
